@@ -1,0 +1,2 @@
+alias gojump='ssh -p 21992 jump.rwwise.us'
+alias resource='source .zshrc'
