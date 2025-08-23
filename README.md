@@ -2,16 +2,13 @@
 This is a repository with the steps needed to configure my linux/max cli workspace setup.
 
 
-## Steps
-
-
-
-
+## Steps for command line setup
 
 1.  Update & Upgrade
 ```bash
 sudo apt update
 sudo apt upgrade
+sudo apt autoremove
 ```
 
 2.  Install zsh
@@ -35,18 +32,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
     find the line ZSH_THEME and change it to "jreese"
     add plugins
 
+## Setup the ssh keys to retrieve code from github
 
-
-5. Create ssh keys
+1. Create ssh keys
 ssh-keygen -t rsa -b 4096
-6. Create GPG keys
+2. Create GPG keys
 gpg --full-generate-key
 gpg --list-secret-keys --keyid-format=long
 gpg --armor --export 3996F5D74A285295
 
-7. make codebase directory
+3. make codebase directory
 
-8.  Install Terraform
+## Setup programs needed for development
+
+1.  Install Terraform
 sudo apt install  software-properties-common gnupg2 curl
 curl https://apt.releases.hashicorp.com/gpg | gpg --dearmor > hashicorp.gpg
 sudo install -o root -g root -m 644 hashicorp.gpg /etc/apt/trusted.gpg.d/
