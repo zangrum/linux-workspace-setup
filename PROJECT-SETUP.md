@@ -1,5 +1,5 @@
 # How I setup a project
-
+In Progress....
 ## Project setup.
 
 ## Readme, License Setup
@@ -14,7 +14,6 @@ https://www.conventionalcommits.org/en/v1.0.0-beta.2/
 https://mokkapps.de/blog/how-to-automatically-generate-a-helpful-changelog-from-your-git-commit-messages/
 https://betterprogramming.pub/how-to-lint-commit-messages-with-husky-and-commitlint-b51d20a5e514
 
-
 ```
 npm i -D @commitlint/{cli,config-conventional}
 
@@ -25,5 +24,11 @@ npx husky install
 npx husky add .husky/commit-msg 'npx commitlint --edit $1'
 
 npm i --save-dev standard-version
-echo '{ "name": "see.readme" "version": "0.1.0", "scripts": {"release": "standard-version","release:minor": "standard-version --release-as minor","release:patch": "standard-version --release-as atch", "release:major": "standard-version --release-as major"}, }'
+echo '{ "name": "see.readme" "version": "0.1.0", "scripts": {"release": "standard-version","release:minor": "standard-version --release-as minor","release:patch": "standard-version --release-as atch", "release:major": "standard-version --release-as major"}, }' >> package.json
+
+```
+
+
+```
+source <(curl -s https://raw.githubusercontent.com/zangrum/linux-workspace-setup/master/setup-changelog.sh)
 ```
